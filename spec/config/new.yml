@@ -1,0 +1,42 @@
+test:
+  allow_dynamic_fields: false
+  autocreate_indexes: false
+  identity_map_enabled: true
+  include_root_in_json: true
+  max_retries_on_connection_failure: 5
+  parameterize_keys: false
+  persist_in_safe_mode: false
+  preload_models: false
+  raise_not_found_error: false
+  skip_version_check: false
+  connections:
+    primary:
+      connect_timeout: 10
+      host: localhost
+      op_timeout: 30
+      pool_size: 1
+      pool_timeout: 5.0
+      port: 27017
+      safe: false
+      slave_ok: true
+      ssl: false
+    secondary:
+      hosts:
+        - localhost
+          27018
+        - localhost
+          27019
+      logger: true
+      name: mongoid_replica_set
+      read: secondary
+      refresh_interval: 90
+      refresh_mode: sync
+      require_primary: true
+  databases:
+    primary:
+      connection: primary
+    secondary:
+      connection: secondary
+      safe: true
+    tertiary:
+      connection: primary
