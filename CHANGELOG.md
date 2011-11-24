@@ -7,6 +7,12 @@ For instructions on upgrading to newer versions, visit
 
 ### New Features
 
+### Major Changes
+
+* Internal language support has been removed. Only English errors will be
+  presented to the developer going forwards and `add_language` has been
+  removed.
+
 ## 2.4.0 \[ In Development \] \[ Branch: master \]
 
 ### New Features
