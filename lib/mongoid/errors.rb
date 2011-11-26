@@ -1,7 +1,6 @@
 # encoding: utf-8
 require "mongoid/errors/mongoid_error"
 require "mongoid/errors/callback"
-require "mongoid/errors/configuration"
 require "mongoid/errors/document_not_found"
 require "mongoid/errors/eager_load"
 require "mongoid/errors/invalid_collection"
